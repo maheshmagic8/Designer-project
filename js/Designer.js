@@ -1,6 +1,9 @@
- var a = document.getElementsByClassName("hamgurgur");
+const hamgurgur  = document.querySelector(".hamgurgur");
+const hidden_manu_list = document.querySelector(".hidden_manu_list");
 
 
-function abc(){
-    document.getElementsByClassName("hamgurgur").classList.toggle("active");
-}
+hamgurgur.addEventListener("click",()=>{
+    hamgurgur.classList.toggle("active");
+    hidden_manu_list.classList.toggle("active_hidden_manu_list")
+})
+

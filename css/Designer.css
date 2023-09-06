@@ -4,7 +4,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 .main-designer-home-section{
     background:linear-gradient(#000,#201f1f);
     min-height: 80vh;
@@ -13,7 +15,6 @@
 section{
     background-color: #201f1f;
 }
-
 
 .navigation{
     display: flex;
@@ -91,6 +92,60 @@ li a:hover{
     text-decoration: none;
 }
 
+.hidden_manu_list{
+    position: absolute;
+    left: 6.1rem;
+    top: 4rem;
+    height: 450px;
+    width: 310px;
+    background-color: #da0c0c;
+    z-index: 2; 
+    visibility: hidden;
+}
+.active_hidden_manu_list{
+    visibility: visible;
+}
+
+
+.hidden_manu{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.hidden_manu li{
+    position: relative;
+    gap: 10px;
+    color: white;
+    font-size: 30px;
+    padding: 17px 0px ;
+    margin: 0;
+}
+
+.hidden_manu li::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    background-color: #d83939;
+    z-index: -1;
+}
+
+.hidden_manu li:hover:after{
+   transition: 0.5s;
+   transform: scaleX(1);
+   transform-origin: left;
+}
+
+.hidden_manu li:hover{
+    color: #131313;
+}
+
 /*==================================NAVIGATION ENDS HERE======================================*/
 
 /*================================DESIGNER SECTION START HERE=======================*/
@@ -100,10 +155,6 @@ li a:hover{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-}
-
-.Designer-img img{
-    height: 40em;
 }
 
 .Designer-content h4{
@@ -144,6 +195,11 @@ li a:hover{
     transition: 0.5s;
 }
 
+.Designer-content button a{
+    text-decoration: none;
+    color: #fff;
+}
+
 /*===================================DESIGNER SECTION ENDS HERE===================================*/
 
 
@@ -174,7 +230,7 @@ li a:hover{
 /*=====================================PRODUCT DESIGN==================================*/
 
 .productdesign{
-    background-color: #201f1f;
+    background-color: #313030;
     padding: 4rem;
     transition: 0.3s;
 }
@@ -221,7 +277,7 @@ li a:hover{
 
 /*====================================UI DESIGN================================*/
 .uidesign{
-    background-color: #201f1f;
+    background-color: #313030;
     padding: 4rem;
     transition: 0.3s;
 }
@@ -267,7 +323,7 @@ li a:hover{
 /*======================================BRANDING=========================================*/
 
 .branding{
-    background-color: #201f1f;
+    background-color: #313030;
     padding: 4rem;
     transition: 0.3s;
 }
@@ -552,7 +608,6 @@ li a:hover{
 .bottom-list ul{
     display: flex;
     justify-content: center;
-    background-color: red;
     position: absolute;
     left: -50%;
     
@@ -575,19 +630,27 @@ li a:hover{
     height: 80px;
 }
 
-.last-section img{
-    height: 4em;
-}
-
 .social-icons i{
     font-size: 3rem;
     color: #000;
 }
 
-.social-icons i:hover{
-    color: #ff0011;
+.bxl-facebook-circle:hover{
+    color: #1877F2;
     transition: 0.5s;
 }
+
+.bxl-twitter:hover{
+    color: #1DA1F2;
+    transition: 0.5s;
+}
+
+
+.bxl-youtube:hover{
+    color: #CD201F;
+    transition: 0.5s;
+}
+
 
 .social-icons i:first-child{
     margin-right: 2rem;
@@ -610,13 +673,17 @@ li a:hover{
 
 /*=================================== MEDIA QUERY=============================== */
 
-@media screen and (max-width:600px) {
+@media only screen and (max-width:500px) {
 
     .hamgurgur{
         display: block;
     }
 
-   
+   .Designer-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
     .navigation ul{
         visibility: hidden;
     }
@@ -633,12 +700,14 @@ li a:hover{
         width: 300px;
     }
 
-    .Designer-img img{
-        height: 200px;
+    .Designer-img{
         position: relative;
-        margin-left: 4rem;
     }
-    
+
+    .Designer-img img{
+        height: 200px;        
+    }
+
     .Designer-content h4{
         font-size: 10px;
     }
@@ -666,6 +735,7 @@ li a:hover{
         position: relative;
         left: 50%;
         transform: translate(-50%);
+        text-align: center;
     }
 
     .Portfolio-content button{
@@ -677,6 +747,12 @@ li a:hover{
         margin-bottom: 2rem;
     }
 
+    .Portfolio-content button a{
+        text-decoration: none;
+        color: #fff;
+
+    }
+
     .Vintage{
         display: grid;
 
@@ -684,47 +760,102 @@ li a:hover{
 
     /*============ FOTTER===== */
 
-    /* .Contact-box{
-        background-color: aquamarine;
-        border: 2px solid black;
-    } */
-    .Contact-box h1{
-        margin: -3rem;
-        font-size: 2em;
+    .Contact-box{
+        position: relative;
+        margin-top:5rem ;
     }
+
+    .Contact-box h1{
+        font-size: 2rem;
+        margin-top: -3rem;
+    }
+
     .Contact-box p{
-        font-size: 1rem;
-        margin-top: 4rem;
-        margin-left: -3rem;
+        font-size: 8px;
+        margin: 0;
+        line-height: 10px;
+        font-weight: 300;
     }
 
     .Contact-box button{
-        font-size: 1rem;
-        margin-top: 4.4rem;
+       margin-top:11.8rem ;
+       height: 40px;
+       width: 100px;
+       font-size: 8px;
     }
+
 
     .bottom-list{
         margin: 0;
         position: relative;
+        height: 100px;
     }
 
     .bottom-list ul{
         position: absolute;
         left: 50%;
-        bottom: 0;
+        bottom: 2rem;
         transform: translate(-50%,0);
     }
 
     .bottom-list ul li{
         padding: 0.5rem 1rem;
         margin-right: 0.5rem;
-        background-color: #ff0011;
     }
-
+   
     .img-section{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
+    .last-section{
+        display: flex;
+        gap: 2rem;
+    }
+
+    .last-section img{
+        height: 40px;
+    }
+
+    .social-icons{
+        display: flex;
+    }
+    .social-icons .bx{
+        margin: 0;
+    }
+
+    .active span:nth-child(2){
+        opacity: 0;
+        transition: 0.3s;
+     }
+
+    .active span:nth-child(1){
+       transform: rotate(45deg);
+       width: 100%;
+       transition: 0.3s;
+    }
+
+    .active span:nth-child(3){
+        transform: rotate(-45deg);
+        width: 100%;
+        top: 1.1rem;
+        left: -1px;
+        transition: 0.3s;
+    }
+
+    .log-sec{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+    }
+
+    .log-sec h5 a{
+        font-size: 2rem;
+        text-decoration: none;
+        color: #fff;
+    }
+
 }
