@@ -597,26 +597,21 @@ li a:hover{
 }
 
 .bottom-list{
-    background-color: #000;
-    height: 40vh;
-    /* float: left; */
-    margin-top: -20rem;
-    z-index: -11;
+    background-color: #000000;
     width: 100%;
 }
 
 .bottom-list ul{
     display: flex;
     justify-content: center;
-    position: absolute;
-    left: -50%;
-    
+    gap: 4rem;
+    margin: 0;
 }
 
 .bottom-list ul li{
-    list-style: none;
-    color: #fff;
-
+    padding: 2rem 0rem;
+    font-weight: 600;
+    color: #fafafa;
 }
 
 /* ====================FOOTER=============== */
@@ -672,8 +667,11 @@ li a:hover{
 }
 
 /*=================================== MEDIA QUERY=============================== */
+/*=================================== MEDIA QUERY=============================== */
+/*=================================== MEDIA QUERY=============================== */
+/*=================================== MEDIA QUERY=============================== */
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:400px) {
 
     .hamgurgur{
         display: block;
@@ -683,6 +681,7 @@ li a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
    }
     .navigation ul{
         visibility: hidden;
@@ -752,22 +751,24 @@ li a:hover{
         color: #fff;
 
     }
+    .img-section{
+        text-align: center;
+    }
 
     .Vintage{
         display: grid;
-
     }
 
     /*============ FOTTER===== */
 
     .Contact-box{
         position: relative;
-        margin-top:5rem ;
+        margin:3rem 0rem ;
     }
 
     .Contact-box h1{
         font-size: 2rem;
-        margin-top: -3rem;
+        margin-top: -4.5rem;
     }
 
     .Contact-box p{
@@ -775,32 +776,17 @@ li a:hover{
         margin: 0;
         line-height: 10px;
         font-weight: 300;
+        padding: 0;
     }
 
     .Contact-box button{
-       margin-top:11.8rem ;
-       height: 40px;
-       width: 100px;
-       font-size: 8px;
-    }
-
-
-    .bottom-list{
-        margin: 0;
-        position: relative;
-        height: 100px;
-    }
-
-    .bottom-list ul{
         position: absolute;
-        left: 50%;
-        bottom: 2rem;
-        transform: translate(-50%,0);
-    }
-
-    .bottom-list ul li{
-        padding: 0.5rem 1rem;
-        margin-right: 0.5rem;
+        right: 0;
+        top: 11.3rem;
+        margin: 0;
+        height: 30px;
+        width: 80px;
+        font-size: 6px;
     }
    
     .img-section{
@@ -808,6 +794,11 @@ li a:hover{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .img-section img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 
     .last-section{
@@ -858,4 +849,10 @@ li a:hover{
         color: #fff;
     }
 
+    .bottom-list ul li{
+        font-size: 10px;
+        padding: 1rem 2px;
+        margin: 0;
+        gap: 1rem;
+    }
 }
