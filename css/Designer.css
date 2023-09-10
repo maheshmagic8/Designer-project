@@ -92,58 +92,65 @@ li a:hover{
     text-decoration: none;
 }
 
-.hidden_manu_list{
-    position: absolute;
-    left: 6.1rem;
-    top: 4rem;
-    height: 450px;
-    width: 310px;
-    background-color: #da0c0c;
-    z-index: 2; 
-    visibility: hidden;
-}
-.active_hidden_manu_list{
-    visibility: visible;
-}
-
-
-.hidden_manu{
-    display: block;
-    justify-content: center;
-    text-align: center;
-    margin-top: 5rem;
-}
-
-.hidden_manu li{
+.hide-manu{
     position: relative;
-    gap: 10px;
-    color: white;
-    font-size: 30px;
-    padding: 17px 0px ;
+    height: 400px;
+    background:linear-gradient(#CD201F, #313030);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    display: none;
+}
+
+.revil{
+    display: block;
+    transition: 0.5s ease;
+}
+
+.hide-manu ul li{
+    position: relative;
+    padding: 2rem 0rem;
     margin: 0;
 }
 
-.hidden_manu li::after{
+.hide-manu ul li::before{
     content: "";
     position: absolute;
     left: 0;
-    top: 0;
     bottom: 0;
-    right: 0;
-    transform: scaleX(0);
-    transform-origin: right;
-    background-color: #d83939;
-    z-index: -1;
+    height: 3px;
+    width: 0%;
+    background-color: #f4f1f1;
+    transform-origin: left;
+    transition: 0.4s;
 }
 
-.hidden_manu li:hover:after{
-   transition: 0.5s;
-   transform: scaleX(1);
-   transform-origin: left;
+.hide-manu ul li:hover:before{
+  width: 100%;
+  transform-origin: right;
 }
 
-.hidden_manu li:hover{
-    color: #131313;
+
+.hide-manu ul li a{
+    font-size:2rem;
+    color: #fff;
+}
+.registration{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.registration h5{
+    color: #e5e5e5;
+    transition: 0.4s;
+}
+
+.registration h5:hover{
+    text-decoration: underline;
 }
 
 /*==================================NAVIGATION ENDS HERE======================================*/
@@ -855,4 +862,66 @@ li a:hover{
         margin: 0;
         gap: 1rem;
     }
+
+    .for_login{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        background-color: #529af8;
+        display: none;
+    }
+    .log_unlock{
+        display: block;
+    }
+
+    .for_login form{
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .for_login form label{
+        font-size: 2rem;
+       color: #fdfdfd;
+    }
+
+    .for_login form input{
+        background:transparent;
+        border: none;
+        border-bottom: 2px solid #000000;
+        outline: none;
+        padding: 10px 0px;        
+    }
+    .for_login form input::placeholder{
+        color: #f4f1f1;
+    }
+
+    .input_icons{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        left: 5.5rem;
+        top: 15rem;
+        gap: 2.5rem;
+    }
+
+    .for_login form button{
+        padding: 1rem 2rem;
+        background-color: #CD201F;
+        color: #fff;
+        border-radius: 5px;
+        border: 2px solid #CD201F;
+        font-weight: 600;
+        margin-top: 3rem;
+    }
+
+    
 }
