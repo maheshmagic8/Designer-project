@@ -682,6 +682,8 @@ li a:hover{
 
     .hamgurgur{
         display: block;
+        position: absolute;
+        right: 3rem;
     }
 
    .Designer-section{
