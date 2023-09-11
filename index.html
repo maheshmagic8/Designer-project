@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Designer</title>
     <link rel="stylesheet" href="css/Designer.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- SWEET ALERT JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -50,16 +52,16 @@
                          <h5>Sign-up</h5>
 
                          <div class="for_login">
-                            <form action="">
+                            <form action="" id="form_m">
                                 <label for="">Log-in</label>
                                 <div class="input_icons">
                                     <box-icon name='envelope' ></box-icon>
                                     <box-icon name='low-vision' ></box-icon>
                                 </div>
-                                <input type="email" placeholder="Enter Email" class="for_login_input">
-                                <input type="password" placeholder="Enter the password" class="for_login_input">
+                                <input type="email" placeholder="Enter Email" autocomplete="name">
+                                <input type="password" placeholder="Enter the password" autocomplete="current-password">
 
-                                <button class="submit-btn" onclick="Submit()">Submit</button>
+                                <button class="submit-btn">Submit</button>
                             </form>
                          </div>
                          <div class="for_signup"></div>
@@ -225,6 +227,8 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="./js/Designer.js"></script>
+<!-- SWEET ALERT JS -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 </body>

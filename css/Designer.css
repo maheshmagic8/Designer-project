@@ -108,7 +108,9 @@ li a:hover{
     display: block;
     transition: 0.5s ease;
 }
-
+.hide-manu ul{
+    padding: 3.5rem 0rem;
+}
 .hide-manu ul li{
     position: relative;
     padding: 2rem 0rem;
@@ -141,10 +143,12 @@ li a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 5rem;
 }
 
 .registration h5{
+    position: relative;
+    margin-left: 3rem;
     color: #e5e5e5;
     transition: 0.4s;
 }
@@ -901,6 +905,7 @@ li a:hover{
         outline: none;
         padding: 10px 0px;        
     }
+
     .for_login form input::placeholder{
         color: #f4f1f1;
     }
@@ -910,9 +915,9 @@ li a:hover{
         flex-direction: column;
         justify-content: center;
         position: absolute;
-        left: 5.5rem;
+        left: 4.5rem;
         top: 15rem;
-        gap: 2.5rem;
+        gap: 2.3rem;
     }
 
     .for_login form button{
