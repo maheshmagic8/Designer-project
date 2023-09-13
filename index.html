@@ -19,6 +19,7 @@
     <main>
         <header class="main-designer-home-section">
             <div class="container">
+
                 <nav class="navigation">
                     <div class="wolf-logo">
                         <img src="./img/fox_ilf52gnnb5ab.ico" alt="">
@@ -49,22 +50,39 @@
                         <li><a href="#">Contact</a></li>
                         <div class="registration">
                          <h5 class="login">Log-in</h5>
-                         <h5>Sign-up</h5>
+                         <h5 class="signup">Sign-up</h5>
 
-                         <div class="for_login">
-                            <form action="" id="form_m">
-                                <label for="">Log-in</label>
-                                <div class="input_icons">
-                                    <box-icon name='envelope' ></box-icon>
-                                    <box-icon name='low-vision' ></box-icon>
+                          <div class="for_login">  
+                             <box-icon name='x' id="for_login_Xicon" class="x_for_login"></box-icon>
+                             <form action="" id="form_m">
+                                 <label for="">Log-in</label>
+                                 <div class="input_icons">
+                                     <box-icon name='envelope' ></box-icon>
+                                     <box-icon name='low-vision' ></box-icon>
                                 </div>
+                                 <input type="email" placeholder="Enter Email" autocomplete="name">
+                                 <input type="password" placeholder="Enter the password" autocomplete="current-password">
+
+                                 <button class="submit-btn">Submit</button>
+                             </form>
+                         </div>
+
+                         <div class="for_signup">
+                            <box-icon name='x' id="for_signup_Xicon" class="x_for_signup"></box-icon>
+                            <form action="" id="signup_form">
+                                <label for="">Sign-up</label>
+                                <div class="signup_input_icons">
+                                    <box-icon name='user'></box-icon>
+                                    <box-icon type='logo' name='gmail'></box-icon>
+                                    <box-icon name='low-vision' ></box-icon>
+                               </div>
+                               <input type="username" placeholder="Enter UserName" autocomplete="name">
                                 <input type="email" placeholder="Enter Email" autocomplete="name">
                                 <input type="password" placeholder="Enter the password" autocomplete="current-password">
 
-                                <button class="submit-btn">Submit</button>
+                                <button class="signup-btn">Submit</button>
                             </form>
                          </div>
-                         <div class="for_signup"></div>
                         </div>
                     </ul>
                 </div>
